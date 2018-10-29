@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <GridPane layoutX="-16.0" layoutY="-16.0" prefHeight="516.0" prefWidth="716.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-16.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-16.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="533.0" prefWidth="392.0" style="-fx-background-color: #2a324b;">
+                     <children>
+                        <ImageView fitHeight="250.0" fitWidth="320.0" layoutX="14.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Costos/images/kisspng-financial-accounting-accounting-software-journal-e-accounting-5ac0bb0d239d64.1951462715225802371459.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="54.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado de costos" textAlignment="CENTER">
+                           <font>
+                              <Font name="Yu Gothic Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text layoutX="46.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv. inicial materia prima" />
+                        <Label layoutX="270.0" layoutY="73.0" text="Label" />
+                        <Text layoutX="46.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compras" />
+                        <Text layoutX="46.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materia prima directa disponible" />
+                        <Text layoutX="46.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv. final materia prima" />
+                        <Text layoutX="46.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo materia prima utilizada" />
+                        <Text layoutX="46.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mano de obra directa" />
+                        <Text layoutX="46.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo primo" />
+                        <Text layoutX="46.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costos indirectos de producción" />
+                        <Text layoutX="46.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costos producción del periodo" />
+                        <Text layoutX="46.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv. incial produccion del producto" />
+                        <Text layoutX="46.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv. final produccion del producto" />
+                        <Text layoutX="46.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv. final produccion del producto" />
+                        <Text layoutX="46.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo producción producto terminado" />
+                        <Text layoutX="46.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo de ventas" />
+                        <Label layoutX="270.0" layoutY="97.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="125.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="154.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="179.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="205.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="231.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="258.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="283.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="308.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="334.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="360.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="384.0" text="Label" />
+                        <Label layoutX="270.0" layoutY="409.0" text="Label" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

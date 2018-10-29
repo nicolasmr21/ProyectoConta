@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GraphicsController">
+   <children>
+      <ScrollPane layoutX="-3.0" layoutY="-3.0" prefHeight="506.0" prefWidth="806.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="1355.0">
+               <children>
+                  <LineChart fx:id="fijoM" layoutX="370.0" layoutY="109.0" prefHeight="300.0" prefWidth="397.0" title="Fijo">
+                     <xAxis>
+                        <CategoryAxis fx:id="yAxis1" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" fx:id="xAxis1" />
+                     </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="mixtoP" layoutX="786.0" layoutY="477.0" prefHeight="300.0" prefWidth="385.0" title="Mixto">
+                     <xAxis>
+                        <CategoryAxis fx:id="yAxis111" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" fx:id="xAxis111" />
+                     </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="fijoP" layoutX="383.0" layoutY="477.0" prefHeight="300.0" prefWidth="403.0" title="Fijo">
+                     <xAxis>
+                        <CategoryAxis fx:id="yAxis12" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" fx:id="xAxis12" />
+                     </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="variableP" layoutX="13.0" layoutY="477.0" prefHeight="300.0" prefWidth="359.0" title="Variable">
+                     <xAxis>
+                        <CategoryAxis fx:id="yAxis2" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" fx:id="xAxis2" />
+                     </yAxis>
+                  </LineChart>
+                  <Label layoutX="459.0" layoutY="44.0" prefHeight="26.0" prefWidth="252.0" text="MINIMOS CUADRADOS">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="459.0" layoutY="419.0" prefHeight="26.0" prefWidth="252.0" text="PUNTO BAJO-ALTO">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <LineChart fx:id="variableM" layoutX="14.0" layoutY="109.0" prefHeight="300.0" prefWidth="356.0" title="Variable">
+                    <xAxis>
+                      <CategoryAxis fx:id="yAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" fx:id="xAxis" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="mixtoM" layoutX="762.0" layoutY="109.0" prefHeight="300.0" prefWidth="397.0" title="Mixto">
+                     <xAxis>
+                        <CategoryAxis fx:id="yAxis11" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" fx:id="xAxis11" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

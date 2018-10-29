@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="1187.0" style="-fx-background-color: #e8eaf6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="561.0" layoutX="206.0" stroke="#0dfbfb" strokeType="INSIDE" strokeWidth="6.0" width="981.0" />
+      <BorderPane fx:id="borderPane" layoutY="1.0" prefHeight="560.0" prefWidth="1175.0">
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="174.0" style="-fx-background-color: #e8eaf6;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="5.0" layoutY="195.0" prefHeight="317.0" prefWidth="187.0" stylesheets="@application.css">
+                     <children>
+                        <Button fx:id="btnFormula" mnemonicParsing="false" onAction="#formulaPresupuestal" prefHeight="80.0" prefWidth="187.0" text="FORMULA PRESUPUESTAL">
+                           <font>
+                              <Font name="Bauhaus 93" size="1.0" />
+                           </font>
+                        </Button>
+                        <Label prefHeight="29.0" prefWidth="5.0" />
+                        <Button fx:id="btnEstado" mnemonicParsing="false" onAction="#estadoDeCostos" prefHeight="80.0" prefWidth="207.0" text="ESTADO DE COSTOS" />
+                        <Label prefHeight="29.0" prefWidth="5.0" />
+                        <Button fx:id="btnBack" mnemonicParsing="false" onAction="#goBack" prefHeight="80.0" prefWidth="185.0" text="SALIR" />
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="170.0" fitWidth="167.0" layoutX="13.0" layoutY="46.0" onMouseDragReleased="#pushImage" onMouseReleased="#pushImage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/aa.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="160.0" fitWidth="747.0" layoutX="123.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../image/1.png" />
+                     </image>
+                  </ImageView>
+                  <StackPane layoutX="173.0" layoutY="174.0" prefHeight="350.0" prefWidth="634.0" style="-fx-background-color: #e8eaf6;">
+                     <children>
+                        <Circle fx:id="c1" fill="#6483a100" radius="162.0" stroke="#0dfbfb" strokeType="INSIDE" strokeWidth="12.0" style="-fx-stroke-dash-array: 40;" />
+                        <Circle fx:id="c3" fill="#6483a100" radius="76.0" stroke="#0dfbfb" strokeType="INSIDE" strokeWidth="8.0" style="-fx-stroke-dash-array: 20;" />
+                        <Circle fx:id="c2" fill="#6483a100" radius="122.0" stroke="#201c2c" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 60;" />
+                        <ImageView fitHeight="76.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/YpGd.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
