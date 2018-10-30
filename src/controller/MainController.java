@@ -1,6 +1,5 @@
 package controller;
 
-import java.awt.Paint;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -39,6 +38,12 @@ public class MainController implements Initializable {
 		
 		@FXML
 		private GraphicsController graficos;
+		
+		@FXML
+		private EstadoCostosController estado;
+		
+		@FXML
+		private CalculateController calcular;
 
 	    @FXML
 	    private Button btnFormula;
@@ -68,11 +73,89 @@ public class MainController implements Initializable {
 	    	FXMLLoader loader = new FXMLLoader();
 	        loader.setLocation(getClass().getResource("/application/EstadoCostos.fxml"));
 	        Parent p = loader.load();
+	        estado = loader.getController();
+	        estado.init(this);
 	        //access the controller and call a method
 	    	borderPane.setCenter(p);
 	    }
+	    
+	    void calcularEstado(String[] nombres, double[] costos, int[] tipos) throws IOException {
+	    	FXMLLoader loader = new FXMLLoader();
+	        loader.setLocation(getClass().getResource("/application/Calculate.fxml"));
+	        Parent p = loader.load();
+	        calcular = loader.getController();
+	        //access the controller and call a method
+	    	borderPane.setCenter(p);
+	    	
+	    	double inicialMD = Double.parseDouble(estado.getTxtInicialMD().getText());
+	    	double compras = calcularCompras(costos, tipos);
+	    	double disponible = inicialMD + compras;
+	    	double finalMD = Double.parseDouble(estado.getTxtFinalMD().getText());
+	    	double MD = disponible - finalMD;
+	    	double MOD = calcularMOD(costos, tipos);
+	    	double primos = MD+MOD;
+	    	double CIF = calcularCIF(costos, tipos);
+	    	double costoProduccion = MD + MOD + CIF;
+	    	double inicialPP = Double.parseDouble(estado.getTxtInicialPP().getText());
+	    	double finalPP = Double.parseDouble(estado.getTxtFinalPP().getText());
+	    	double costoTerminado = costoProduccion + inicialPP - finalPP;
+	    	double inicialPT = Double.parseDouble(estado.getTxtInicialPT().getText());
+	    	double finalPT = Double.parseDouble(estado.getTxtFinalPT().getText());
+	    	double costoVenta = costoTerminado + inicialPT -finalPT;
 
-	    @FXML
+	    	
+	    	calcular.getInicialMD().setText(String.valueOf(inicialMD));;
+	    	calcular.getCompras().setText(String.valueOf(compras));;
+	    	calcular.getDisponibleMD().setText(String.valueOf(disponible));
+	    	calcular.getFinalMD().setText(String.valueOf(finalMD));
+	    	calcular.getMD().setText(String.valueOf(MD));
+	    	calcular.getMOD().setText(String.valueOf(MOD));
+	    	calcular.getCostoPrimo().setText(String.valueOf(primos));
+	    	calcular.getCIF().setText(String.valueOf(CIF));
+	    	calcular.getCostoProduccion().setText(String.valueOf(costoProduccion));
+	    	calcular.getInicialPP().setText(String.valueOf(inicialPP));
+	    	calcular.getFinalPP().setText(String.valueOf(finalPP));
+	    	calcular.getCostoPTerminado().setText(String.valueOf(costoTerminado));
+	    	calcular.getInicialPT().setText(String.valueOf(inicialPT));
+	    	calcular.getFinalPT().setText(String.valueOf(finalPT));
+	    	calcular.getCostoVenta().setText(String.valueOf(costoVenta));
+
+
+
+	    	
+	    }
+
+	    private double calcularCompras(double[] costos, int[] tipos) {
+	    	double compras = 0;
+	    	for (int i = 0; i < tipos.length; i++) {
+				if(tipos[i]==1) {
+					compras += costos[i];
+				}
+			}
+	    	return compras;
+		}
+	    
+	    private double calcularCIF(double[] costos, int[] tipos) {
+	    	double CIF = 0;
+	    	for (int i = 0; i < tipos.length; i++) {
+				if(tipos[i]==2) {
+					CIF += costos[i];
+				}
+			}
+	    	return CIF;
+		}
+	    
+	    private double calcularMOD(double[] costos, int[] tipos) {
+	    	double MOD = 0;
+	    	for (int i = 0; i < tipos.length; i++) {
+				if(tipos[i]==3) {
+					MOD += costos[i];
+				}
+			}
+	    	return MOD;
+		}
+
+		@FXML
 	    void formulaPresupuestal(ActionEvent event) throws IOException {
 	    	FXMLLoader loader = new FXMLLoader();
 	        loader.setLocation(getClass().getResource("/application/s.fxml"));

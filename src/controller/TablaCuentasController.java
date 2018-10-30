@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,7 +32,7 @@ import javafx.util.StringConverter;
 
 public class TablaCuentasController implements Initializable {
     @FXML
-    private MainController main;
+    private EstadoCostosController main;
     
     @FXML
     private BorderPane root;
@@ -195,12 +196,21 @@ public class TablaCuentasController implements Initializable {
         Button calcButton = new Button( "Calcular");
         calcButton.setOnAction(e -> {
         	
+        	String[] n = new String[data.size()]; 
         	double[] a = new double[data.size()];
-        	double[] b = new double[data.size()];
+        	int[] b = new int[data.size()];
         	
         	for (int i = 0; i < data.size(); i++) {
-//				a[i] = data.get(i).getNumber1();
-//				b[i] = data.get(i).getNumber2();
+        		n[i] = data.get(i).getName();
+				a[i] = data.get(i).getCost();
+				b[i] = (int)data.get(i).getType();
+			}
+        	
+        	try {
+				main.calcularEstado(n, a, b);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
         	
         });
@@ -322,8 +332,8 @@ public class TablaCuentasController implements Initializable {
             return this.name;
         }
 
-        public final double getName() {
-            return this.typeProperty().get();
+        public final String getName() {
+            return this.nameProperty().get();
         }
 
         public final void setName(final String n) {
@@ -333,7 +343,7 @@ public class TablaCuentasController implements Initializable {
     }
 
 
-	 public void init(MainController m) {
+	 public void init(EstadoCostosController m) {
 			main = m;
 		}
 

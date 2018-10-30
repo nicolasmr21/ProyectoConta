@@ -52,12 +52,12 @@
                </font>
             </Text>
             <BorderPane fx:id="borderPane" layoutX="12.0" layoutY="228.0" prefHeight="338.0" prefWidth="442.0" />
-            <TextField fx:id="txtInicialMD" layoutX="157.0" layoutY="65.0" />
-            <TextField fx:id="txtInicialPP" layoutX="157.0" layoutY="106.0" />
-            <TextField fx:id="txtInicialPT" layoutX="157.0" layoutY="139.0" />
-            <TextField fx:id="txtFinalMD" layoutX="312.0" layoutY="65.0" />
-            <TextField fx:id="txtFinalPP" layoutX="312.0" layoutY="106.0" />
-            <TextField fx:id="txtFinalPT" layoutX="312.0" layoutY="139.0" />
+            <TextField fx:id="txtInicialMD" layoutX="157.0" layoutY="65.0" text="10" />
+            <TextField fx:id="txtInicialPP" layoutX="157.0" layoutY="106.0" text="10" />
+            <TextField fx:id="txtInicialPT" layoutX="157.0" layoutY="139.0" text="10" />
+            <TextField fx:id="txtFinalMD" layoutX="312.0" layoutY="65.0" text="10" />
+            <TextField fx:id="txtFinalPP" layoutX="312.0" layoutY="106.0" text="10" />
+            <TextField fx:id="txtFinalPT" layoutX="312.0" layoutY="139.0" text="10" />
             <Text layoutX="177.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo: 1.COMPRAS 2.CIF 3. MOD" wrappingWidth="228.37255859375">
                <font>
                   <Font size="11.0" />
